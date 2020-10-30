@@ -15,7 +15,8 @@ class TextFormatter {
 
   // Konstruktor
   public TextFormatter(int maxLineLength) {
-    // ...
+    // test zur Abgabe (noch nichts codiert)
+    
   }
 
   // Ausgabe
