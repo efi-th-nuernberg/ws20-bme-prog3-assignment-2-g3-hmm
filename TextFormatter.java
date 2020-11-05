@@ -22,7 +22,6 @@ private int maxLength;
   // Konstruktor
   public TextFormatter(int maxLineLength) {
      maxLength = maxLineLength;
-  
   }
   
   // Ausgabe
