@@ -15,7 +15,7 @@ private int maxLength;
   public static void main(String[] args) {
 
     TextFormatter formatter = new TextFormatter(30); 
-  //  formatter.printLeft(text);
+    formatter.printLeft(text);
     formatter.printRight(text);
 
   }
@@ -30,12 +30,12 @@ private int maxLength;
   public void printLeft(String aText) {
     String[] words = aText.split(" ");
     int letterCounter = 0;
-	  for(int i = 0; i < words.length; i++) {
+	  for (int i = 0; i < words.length; i++) {
       int wordLength = words[i].length();
 	    if (letterCounter + wordLength <= maxLength) {
 	      letterCounter += wordLength + 1;
         System.out.print(words[i] + " ");
-	    }else{
+	    } else {
 	    	System.out.print("\n" + words[i] + " ");
         letterCounter = wordLength + 1;
       }
@@ -47,26 +47,23 @@ private int maxLength;
     String[] words = aText.split(" ");
     String line = "";
     int letterCounter = 0;
-	  for(int i = 0; i < words.length; i++) {
+	  for (int i = 0; i < words.length; i++) {
       int wordLength = words[i].length();
-	    if(letterCounter + wordLength <= maxLength) {
+	    if (letterCounter + wordLength <= maxLength) {
 	      letterCounter += wordLength + 1;
         line += " " + words[i];
-	    }else{
-       
-        while(line.length() < maxLength){
+	    } else {
+        while (line.length() < maxLength) {
           line = " " + line;
         }
-    
-	    	System.out.print( line + "\n");
+	    	System.out.print(line + "\n");
         letterCounter = wordLength + 1;
         line = " " + words[i];
       }
+      }
+      while(line.length() < maxLength){
+       line = " " + line;
+      }
+      System.out.println(line);
     }
-     while(line.length() < maxLength){
-          line = " " + line;
-        }
-    System.out.println(line);
-  }
 } 	
-
